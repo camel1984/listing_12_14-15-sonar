@@ -2,20 +2,14 @@
 # command
 gradle web:jettyRun
 
-gradle build
+start sonar servier:
 
-gradle compareGradleBuilds
+/Users/shuaijie/server/sonarqube-7.8/bin/macosx-universal-64/sonar.sh start
 
-gradle fetchExternalJs
+http://127.0.0.1:9000 to access sonar webpage.
 
-gradle build -PjsOptimize
+gradle repository:sonarqube
 
-gradle web:jsHint
-
-gradle web:jettyRun
-
-
-java -cp /Users/shuaijie/.gradle/caches/modules-2/files-2.1/org.mozilla/rhino/1.7.11/cf04bfb7dcf7bacbf93ab7727d842f3ab5a66f0d/rhino-1.7.11.jar  org.mozilla.javascript.tools.shell.Main /Users/shuaijie/document/java_frameworks/gradle/mycode/jslib/jshint-2.6.3/dist/jshint-rhino.js /Users/shuaijie/document/java_frameworks/gradle/mycode/ch11/listing_11_06-07-todo-js-code-quality/web/src/main/webapp/js/app/edit-action.js
 
 this verison only works with gradle 5.1:
 
